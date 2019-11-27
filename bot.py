@@ -14,10 +14,10 @@ def start_message(message):
 
 
 bot.infinity_polling(True)
-'''try:
-    bot.polling()
-except OSError as e:
-    print(e)
-    bot.stop_polling()
-    sleep(5)
-    bot.polling()'''
+# try:
+#     bot.polling()
+# except OSError as e:
+#     print(e)
+#     bot.stop_polling()
+#     sleep(5)
+#     bot.polling()
