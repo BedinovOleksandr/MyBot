@@ -9,6 +9,17 @@ def sql_connection():
     except Error:
         print(Error)
 
+sql_connection().cursor().execute("""create table if not exists user
+(
+	id INTEGER,
+	is_bot INTEGER,
+	first_name TEXT,
+	username TEXT,
+	last_name TEXT,
+	language_code TEXT
+);
+""")
+
 
 # Using user id
 def сheck_user_if_exist(id):
