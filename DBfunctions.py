@@ -36,5 +36,3 @@ def insert_user(args):
 
 
 sql_connection().close()
-
-#'id': 518356070, 'is_bot': False, 'first_name': 'OLEKSANDR', 'username': None, 'last_name': 'BEDINOV', 'language_code': 'ru'
