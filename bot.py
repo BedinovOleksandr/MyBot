@@ -3,7 +3,7 @@ from time import sleep
 import telebot
 import DBfunctions
 
-bot = telebot.TeleBot('915271863:AAHpmWLQOEsHPbz226tceUMGetyfBQoCNCs')
+bot = telebot.TeleBot('YOUR TOKEN')
 
 
 
@@ -13,11 +13,11 @@ def start_message(message):
     bot.send_message(message.chat.id, 'Привет, ты написал мне /start')
 
 
-bot.infinity_polling(True)
-# try:
-#     bot.polling()
-# except OSError as e:
-#     print(e)
-#     bot.stop_polling()
-#     sleep(5)
-#     bot.polling()
+while True:
+    try:
+        bot.polling(none_stop=True)
+
+    except Exception as e:
+        print(e)  # или просто print(e) если у вас логгера нет,
+        # или import traceback; traceback.print_exc() для печати полной инфы
+        sleep(15)
